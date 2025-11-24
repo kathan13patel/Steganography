@@ -1,0 +1,128 @@
+.not-found-container {
+  height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+}
+
+.not-found-content {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  max-width: 510px;
+  animation: fadeIn 0.6s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.error-doodle {
+  font-size: 80px;
+  margin-bottom: 10px;
+  animation: doodleJump 2s ease-in-out infinite;
+}
+
+@keyframes doodleJump {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25% { transform: translateY(-8px) rotate(5deg); }
+  75% { transform: translateY(4px) rotate(-3deg); }
+}
+
+.error-code {
+  font-size: 80px;
+  font-weight: 900;
+  background: linear-gradient(135deg, #ff6b6b, #ee5a52);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 5px 0;
+}
+
+.error-title {
+  font-size: 1.8rem;
+  color: #2d3748;
+  margin: 10px 0;
+}
+
+.error-message {
+    color: white;
+    margin: 15px 0;
+    line-height: 1.4;
+    font-size: medium;
+    margin-bottom: 7%;
+}
+
+.error-suggestions {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 10px;
+  margin: 20px 0;
+  border-left: 4px solid #4299e1;
+}
+
+.error-suggestions p {
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.error-suggestions ul {
+  list-style: none;
+  padding: 0;
+}
+
+.error-suggestions li {
+  padding: 4px 0;
+  color: #4a5568;
+}
+
+.home-button {
+  background: linear-gradient(135deg, #4299e1, #3182ce);
+  color: white;
+  border: none;
+  padding: 12px 35px;
+  font-size: 1rem;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.home-button:hover {
+  transform: translateY(-2px);
+}
+
+.doodle-orb {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  animation: float 4s ease-in-out infinite;
+}
+
+.doodle-orb:nth-child(1) {
+  width: 60px; height: 60px;
+  top: 15%; left: 10%;
+}
+
+.doodle-orb:nth-child(2) {
+  width: 40px; height: 40px;
+  bottom: 20%; right: 15%;
+  animation-delay: 1s;
+}
+
+.doodle-orb:nth-child(3) {
+  width: 30px; height: 30px;
+  top: 70%; left: 20%;
+  animation-delay: 2s;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-20px) rotate(180deg); }
+}
